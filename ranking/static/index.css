@@ -1,0 +1,61 @@
+h1.title {
+  font-family: "Verdana", sans-serif;
+  font-size: 2.5em;
+  margin-left: 25%;
+  color: #b3b3b3;
+}
+
+div.navigation {
+  margin-left: 2%;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+a {
+  text-decoration: none;
+  background-color: #999999;
+  font-family: "Verdana", sans-serif;
+  font-size: 20px;
+  margin-left: 2px;
+  text-align: center;
+  padding: 5px 100px;
+  color: #ffffff;
+}
+
+a:hover {
+  background-color: #b3b3b3;
+}
+
+label {
+  font-family: "Verdana", sans-serif;
+  margin-left: 2%;
+  color: #1a1a1a;
+}
+
+label.to {
+  margin-left: 0;
+}
+
+input {
+  height: 1.8em;
+  font-size: 14px;
+  padding-left: 8px;
+}
+
+input.text {
+  width: 15em;
+}
+
+input.number {
+  width: 5em;
+}
+
+input:focus, input:checked {
+  outline: none;
+}
+
+input.search {
+  margin-left: 3%;
+  padding: 5px 15px;
+  font-size: 20px;
+}

@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href={% static 'index.css' %}>
+  </head>
+  <body>
+    <h1 class="title">University Ranking</h1>
+    <div class="navigation">
+      <a href="{% url 'index' %}"> Times </a>
+      <a href="{% url 'cwur' %}"> CWUR </a>
+      <a href="{% url 'shanghai' %}"> Shanghai </a>
+    </div>
+    <div class="form">
+    <form action="#" method="get">
+      <label class="normal" for="university"> University </label>
+      <input class="text" type="text" name="university" placeholder="optional">
+      <label class="normal" for="fromyear"> From Year </label>
+      <input class="number" type="text" name="from" placeholder="optional">
+      <label class="to" for="toyear"> To Year </label>
+      <input class="number" type="text" name="to" placeholder="optional">
+      <label class="normal" for="limit"> Limit Number </label>
+      <input class="number" type="text" name="limitNum" placeholder="optional">
+      <input class="search" type="submit" name="search" value="Search">
+    </form>
+    </div>
+    {% block content %}{% endblock %}
+  </body>
+</html>
