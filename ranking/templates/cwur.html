@@ -1,7 +1,40 @@
 {% extends "base.html" %}
 
-{% block title %} CWURRanking {% endblock %}
+{% block title %} CWURanking {% endblock %}
 
 {% block content %}
-  <p> {{text}}, {{name}}! </p>
+  <table>
+    <tr>
+      <th> world_rank </th>
+      <th> university_name </th>
+      <th> country </th>
+      <th> rank_year </th>
+      <th> total_score </th>
+      <th> nation_rank </th>
+      <th> education_rank </th>
+      <th> employment_rank </th>
+      <th> faculty_rank </th>
+      <th> publication_rank </th>
+      <th> influence_rank </th>
+      <th> citation_rank </th>
+      <th> patent_rank </th>
+    </tr>
+    {% for rank in rankings %}
+    <tr>
+      <td> {{rank.WorldRank}} </td>
+      <td> {{rank.UnivName}} </td>
+      <td> {{rank.Country}} </td>
+      <td> {{rank.RankYear}} </td>
+      <td> {{rank.TotalScore}} </td>
+      <td> {{rank.NationRank}} </td>
+      <td> {{rank.EducationRank}} </td>
+      <td> {{rank.EmploymentRank}} </td>
+      <td> {{rank.FacultyRank}} </td>
+      <td> {{rank.PublicationRank}} </td>
+      <td> {{rank.InfluenceRank}} </td>
+      <td> {{rank.CitationRank}} </td>
+      <td> {{rank.PatentRank}} </td>
+    </tr>
+    {% endfor %}
+  </table>
 {% endblock %}

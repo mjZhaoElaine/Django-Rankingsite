@@ -59,3 +59,7 @@ input.search {
   padding: 5px 15px;
   font-size: 20px;
 }
+
+div.form {
+  margin-bottom: 30px;
+}

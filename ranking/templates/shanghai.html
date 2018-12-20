@@ -1,7 +1,38 @@
 {% extends "base.html" %}
 
-{% block title %} ShanghaiRanking {% endblock %}
+{% block title %} SHJTRanking {% endblock %}
 
 {% block content %}
-  <p> {{text}}, {{name}}! </p>
+  <table>
+    <tr>
+      <th> world_rank </th>
+      <th> university_name </th>
+      <th> country </th>
+      <th> rank_year </th>
+      <th> total_score </th>
+      <th> nation_rank </th>
+      <th> alumni_score </th>
+      <th> award_score </th>
+      <th> hici_score </th>
+      <th> ns_score </th>
+      <th> pub_score </th>
+      <th> pcp_score </th>
+    </tr>
+    {% for rank in rankings %}
+    <tr>
+      <td> {{rank.WorldRank}} </td>
+      <td> {{rank.UnivName}} </td>
+      <td> {{rank.Country}} </td>
+      <td> {{rank.RankYear}} </td>
+      <td> {{rank.TotalScore}} </td>
+      <td> {{rank.NationRank}} </td>
+      <td> {{rank.AlumniScore}} </td>
+      <td> {{rank.AwardScore}} </td>
+      <td> {{rank.HICIScore}} </td>
+      <td> {{rank.NSScore}} </td>
+      <td> {{rank.PUBScore}} </td>
+      <td> {{rank.PCPScore}} </td>
+    </tr>
+    {% endfor %}
+  </table>
 {% endblock %}

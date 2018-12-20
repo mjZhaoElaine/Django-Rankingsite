@@ -5,5 +5,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('times', views.index, name='index'),
     path('cwur', views.cwur, name='cwur'),
-    path('shanghai', views.shanghai, name='shanghai'),
+    path('shjt', views.shjt, name='shjt'),
 ]

@@ -3,13 +3,39 @@
 {% block title %} TimesRanking {% endblock %}
 
 {% block content %}
-  <p> {{text}}, {{name}}! </p>
+  <p> {{text}} </p>
   <table>
     <tr>
-      <th></th>
+      <th> world_rank </th>
+      <th> university_name </th>
+      <th> country </th>
+      <th> rank_year </th>
+      <th> total_score </th>
+      <th> teach_score </th>
+      <th> international_score </th>
+      <th> research_score </th>
+      <th> citation_score </th>
+      <th> income_score </th>
+      <th> num_student </th>
+      <th> student_staff_ratio </th>
+      <th> international_student_ratio </th>
     </tr>
     {% for rank in rankings %}
-
+    <tr>
+      <td> {{rank.WorldRank}} </td>
+      <td> {{rank.UnivName}} </td>
+      <td> {{rank.Country}} </td>
+      <td> {{rank.RankYear}} </td>
+      <td> {{rank.TotalScore}} </td>
+      <td> {{rank.TeachScore}} </td>
+      <td> {{rank.InterScore}} </td>
+      <td> {{rank.ResearchScore}} </td>
+      <td> {{rank.CitationScore}} </td>
+      <td> {{rank.IncomeScore}} </td>
+      <td> {{rank.NumStudent}} </td>
+      <td> {{rank.StudentStaffRatio}} </td>
+      <td> {{rank.InterStudentRatio}} </td>
+    </tr>
     {% endfor %}
-  </table>>
+  </table>
 {% endblock %}
