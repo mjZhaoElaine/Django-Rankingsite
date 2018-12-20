@@ -48,7 +48,7 @@ def TimesNormalSearch(university, fromyear, toyear, limit):
             param = [fromyear]
             cursor.execute(query, param)
         elif (university == "" and fromyear == "" and toyear == "" and limit != ""):
-            query = "SELECT * FROM ranking_timesrank WHERE rankyear = 2016 LIMIT %s"
+            query = "SELECT * FROM ranking_timesrank WHERE rankyear = 2016 AND worldrank <= %s"
             param = [limit]
             cursor.execute(query, param)
         elif(university != "" and fromyear != "" and toyear == "" and limit == ""):
@@ -56,7 +56,7 @@ def TimesNormalSearch(university, fromyear, toyear, limit):
             param = [university, fromyear]
             cursor.execute(query, param)
         elif(university == "" and fromyear != "" and toyear == "" and limit != ""):
-            query = "SELECT * FROM ranking_timesrank WHERE RankYear = %s LIMIT %s"
+            query = "SELECT * FROM ranking_timesrank WHERE RankYear = %s AND worldrank <= %s"
             param = [fromyear, limit]
             cursor.execute(query, param)
         elif(university != "" and fromyear != "" and toyear != "" and limit == ""):
@@ -86,7 +86,7 @@ def CWUNormalSearch(university, fromyear, toyear, limit):
             param = [fromyear]
             cursor.execute(query, param)
         elif (university == "" and fromyear == "" and toyear == "" and limit != ""):
-            query = "SELECT * FROM ranking_cwurank WHERE rankyear = 2016 LIMIT %s"
+            query = "SELECT * FROM ranking_cwurank WHERE rankyear = 2016 AND worldrank <= %s"
             param = [limit]
             cursor.execute(query, param)
         elif(university != "" and fromyear != "" and toyear == "" and limit == ""):
@@ -94,7 +94,7 @@ def CWUNormalSearch(university, fromyear, toyear, limit):
             param = [university, fromyear]
             cursor.execute(query, param)
         elif(university == "" and fromyear != "" and toyear == "" and limit != ""):
-            query = "SELECT * FROM ranking_cwurank WHERE RankYear = %s LIMIT %s"
+            query = "SELECT * FROM ranking_cwurank WHERE RankYear = %s AND worldrank <= %s"
             param = [fromyear, limit]
             cursor.execute(query, param)
         elif(university != "" and fromyear != "" and toyear != "" and limit == ""):
@@ -124,7 +124,7 @@ def SHJTNormalSearch(university, fromyear, toyear, limit):
             param = [fromyear]
             cursor.execute(query, param)
         elif (university == "" and fromyear == "" and toyear == "" and limit != ""):
-            query = "SELECT * FROM ranking_shjtrank WHERE rankyear = 2016 LIMIT %s"
+            query = "SELECT * FROM ranking_shjtrank WHERE rankyear = 2016 AND worldrank <= %s"
             param = [limit]
             cursor.execute(query, param)
         elif(university != "" and fromyear != "" and toyear == "" and limit == ""):
@@ -132,7 +132,7 @@ def SHJTNormalSearch(university, fromyear, toyear, limit):
             param = [university, fromyear]
             cursor.execute(query, param)
         elif(university == "" and fromyear != "" and toyear == "" and limit != ""):
-            query = "SELECT * FROM ranking_shjtrank WHERE RankYear = %s LIMIT %s"
+            query = "SELECT * FROM ranking_shjtrank WHERE RankYear = %s AND worldrank <= %s"
             param = [fromyear, limit]
             cursor.execute(query, param)
         elif(university != "" and fromyear != "" and toyear != "" and limit == ""):
