@@ -3,39 +3,67 @@
 {% block title %} TimesRanking {% endblock %}
 
 {% block content %}
-  <p> {{text}} </p>
+
+  <div>
+  {% for eachyear in  countryMetrix %}
+  <table class="country">
+    <tr>
+      <td class="title">country({{eachyear.year}})</td>
+      {% for country in eachyear.country %}
+      <td class="text"> {{country}} </td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td class="title">count</td>
+      {% for count in eachyear.count %}
+      <td class="num"> {{count}} </td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td class="title">percentage</td>
+      {% for percent in eachyear.percent %}
+      <td class="num"> {{percent}}% </td>
+      {% endfor %}
+    </tr>
+  </<table>
+  {% endfor %}
+  </div>
+
+  <div>
   <table>
     <tr>
-      <th> world_rank </th>
-      <th> university_name </th>
-      <th> country </th>
-      <th> rank_year </th>
-      <th> total_score </th>
-      <th> teach_score </th>
-      <th> international_score </th>
-      <th> research_score </th>
-      <th> citation_score </th>
-      <th> income_score </th>
-      <th> num_student </th>
-      <th> student_staff_ratio </th>
-      <th> international_student_ratio </th>
+      <th>world_rank</th>
+      <th>university_name</th>
+      <th>country</th>
+      <th>rank_year(2011-2016)</th>
+      <th>total_score</th>
+      <th>teach</th>
+      <th>inter_score</th>
+      <th>research</th>
+      <th>citation</th>
+      <th>income</th>
+      <th>num_student</th>
+      <th>student_staff_ratio</th>
+      <th>inter_student_ratio</th>
     </tr>
     {% for rank in rankings %}
     <tr>
-      <td> {{rank.WorldRank}} </td>
-      <td> {{rank.UnivName}} </td>
-      <td> {{rank.Country}} </td>
-      <td> {{rank.RankYear}} </td>
-      <td> {{rank.TotalScore}} </td>
-      <td> {{rank.TeachScore}} </td>
-      <td> {{rank.InterScore}} </td>
-      <td> {{rank.ResearchScore}} </td>
-      <td> {{rank.CitationScore}} </td>
-      <td> {{rank.IncomeScore}} </td>
-      <td> {{rank.NumStudent}} </td>
-      <td> {{rank.StudentStaffRatio}} </td>
-      <td> {{rank.InterStudentRatio}} </td>
+      <td class="rank"> {{rank.WorldRank}} </td>
+      <td class="text"> {{rank.UnivName}} </td>
+      <td class="text"> {{rank.Country}} </td>
+      <td class="num"> {{rank.RankYear}} </td>
+      <td class="num"> {{rank.TotalScore}} </td>
+      <td class="num"> {{rank.TeachScore}} </td>
+      <td class="num"> {{rank.InterScore}} </td>
+      <td class="num"> {{rank.ResearchScore}} </td>
+      <td class="num"> {{rank.CitationScore}} </td>
+      <td class="num"> {{rank.IncomeScore}} </td>
+      <td class="num"> {{rank.NumStudents}} </td>
+      <td class="num"> {{rank.StudentStaffRatio}} </td>
+      <td class="num"> {{rank.InterStudentRatio}} </td>
     </tr>
     {% endfor %}
   </table>
+  </div>
+
 {% endblock %}

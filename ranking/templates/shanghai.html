@@ -3,12 +3,38 @@
 {% block title %} SHJTRanking {% endblock %}
 
 {% block content %}
+
+  <div>
+  {% for eachyear in  countryMetrix %}
+  <table class="country">
+    <tr>
+      <td class="title">country({{eachyear.year}})</td>
+      {% for country in eachyear.country %}
+      <td> {{country}} </td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td class="title">count</td>
+      {% for count in eachyear.count %}
+      <td class="num"> {{count}} </td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td class="title">percentage</td>
+      {% for percent in eachyear.percent %}
+      <td class="num"> {{percent}}% </td>
+      {% endfor %}
+    </tr>
+  </<table>
+  {% endfor %}
+  </div>
+
   <table>
     <tr>
       <th> world_rank </th>
       <th> university_name </th>
       <th> country </th>
-      <th> rank_year </th>
+      <th> rank_year(2005-2015) </th>
       <th> total_score </th>
       <th> nation_rank </th>
       <th> alumni_score </th>

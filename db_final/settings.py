@@ -76,18 +76,14 @@ WSGI_APPLICATION = 'db_final.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'cs41518_jlin124_db',
-        # 'USER': 'jlin124',
-        # 'PASSWORD': 'xepfiofsft',
-        # 'HOST': 'dbase.cs.jhu.edu',
-        # 'PORT': '3306',
         'ENGINE': 'django.db.backends.mysql',
+        # Change the value of 'Name' with the name of your database created for it
         'NAME': 'db_final_shao',
+        # Change the value of 'User' with your username for mysql
         'USER': 'root',
+        # Change the value of 'PASSWORD' with your password for mysql
         'PASSWORD': 'pass',
+        # Change the value of 'HOST' with the host you are using your mysql
         'HOST': 'localhost',
         'PORT': '3306',
     }
